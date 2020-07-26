@@ -1,7 +1,7 @@
 name: 'My Action'
 description: 'My first action with docker'
 inputs:
-  first-name:
+  FIRST_NAME:
     description: 'The first name'
     required: true
     default: 'John'
@@ -9,7 +9,7 @@ outputs:
   time:
     description: 'The elapsed time'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   args:
-    - ${{ inputs.first-name }}
+    - ${{ inputs.FIRST_NAME }}
